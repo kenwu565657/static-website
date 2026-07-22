@@ -105,9 +105,9 @@ function AccordionItem({ q, a }: { q: string; a: string }) {
 
 /* ── Screenshots ── */
 const SHOTS = [
-  { src: screenshot1 as string, caption: "Script mode — live JavaScript output" },
-  { src: screenshot2 as string, caption: "Library — up to 50 saved codes" },
-  { src: screenshot3 as string, caption: "Text mode — instant plain-text QR" },
+  { src: screenshot1 as string, caption: "Script mode — live JavaScript output \n 腳本模式 — 即時輸出 JavaScript 結果" },
+  { src: screenshot2 as string, caption: "Library — up to 50 saved QR Code \n 收藏庫 — 最多儲存 50 個二維碼" },
+  { src: screenshot3 as string, caption: "Text mode — instant plain-text QR Code \n 文字模式 — 即時生成純文字二維碼" },
 ];
 
 function Screenshots() {
@@ -255,14 +255,13 @@ export default function App() {
         <div className="max-w-3xl mx-auto px-6 h-14 flex items-center justify-between">
           <div className="flex items-center gap-2.5">
             <QRLogo size={32} />
-            <span className="font-semibold text-sm tracking-tight">Dynamic QR Generator</span>
+            <span className="font-semibold text-sm tracking-tight">Dynamic QR Code Generator 動態二維碼生成器</span>
           </div>
           <nav className="hidden sm:flex items-center gap-5 text-xs font-medium" style={{ color: "#8e8e93" }}>
             <a href="#features" className="hover:text-foreground transition-colors">Features</a>
             <a href="#screenshots" className="hover:text-foreground transition-colors">Screenshots</a>
             <a href="#privacy" className="hover:text-foreground transition-colors">Privacy</a>
             <a href="#terms" className="hover:text-foreground transition-colors">Terms</a>
-            <a href="#contact" className="hover:text-foreground transition-colors">Contact</a>
           </nav>
         </div>
       </header>
@@ -270,70 +269,59 @@ export default function App() {
       <main className="max-w-3xl mx-auto px-6">
 
         {/* Hero */}
-        <section className="pt-16 pb-14 text-center">
+        <section className="pt-16 text-center">
           <div className="flex justify-center mb-6"><QRLogo size={80} /></div>
           <h1 className="text-4xl sm:text-5xl font-extrabold tracking-tight text-foreground mb-4 leading-tight">
-            Dynamic QR Generator
+            Dynamic QR Code Generator <br /> 動態二維碼生成器
           </h1>
           <p className="text-base sm:text-lg leading-relaxed max-w-xl mx-auto" style={{ color: "#8e8e93" }}>
-            The smartest QR code app for iPhone and Android. Type plain text, craft a
-            JavaScript script, or deep-link anything — then share in seconds.
+            The QR code app for iPhone and Android. Type plain text or JavaScript — then share to others.
+            <br />
+            支援 iPhone 與 Android 的二維碼生成器。隨心輸入純文字或 JavaScript，即時生成，隨時分享。
           </p>
-          <div className="flex flex-wrap justify-center gap-3 mt-8">
-            <AppStoreBadge />
-            <PlayStoreBadge />
-          </div>
+          {
+            false &&
+              <div className="flex flex-wrap justify-center gap-3 mt-8">
+                { false && <AppStoreBadge /> }
+                { false && <PlayStoreBadge /> }
+              </div>
+          }
+
           <p className="mt-5 text-xs" style={{ color: "#8e8e93" }}>Free to download · No account needed · Works offline</p>
+          <p className="text-xs" style={{ color: "#8e8e93" }}>免費下載 · 免註冊登入 · 100% 離線運行</p>
         </section>
 
         <Divider />
 
         {/* Features */}
-        <section id="features" className="scroll-mt-20 pb-14">
-          <SectionLabel>What it does</SectionLabel>
-          <h2 className="text-2xl font-bold text-foreground mb-8">Everything you need,<br />nothing you don't.</h2>
+        <section id="features" className="scroll-mt-20">
+          <SectionLabel>What it does / 核心功能</SectionLabel>
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
-            <FeatureCard icon={QrCode} title="Instant QR generation" desc="Type anything and get a scannable QR code in real time. No network required." />
-            <FeatureCard icon={Code2} title="JavaScript Script Editor" desc="Write JS scripts that produce dynamic content — like the current time or calculated values — every time the QR is generated." />
-            <FeatureCard icon={BookMarked} title="Personal library" desc="Save up to 50 QR codes locally on your device. Scripts and plain-text codes, all in one place." />
-            <FeatureCard icon={Share2} title="Deep link sharing" desc="Share QR codes as deep links. Data is encoded directly into the URL — no server, no upload, no tracking." />
-            <FeatureCard icon={Shield} title="100% on-device" desc="Nothing leaves your phone. Your scripts, your text, your codes — always local, always yours." />
-            <FeatureCard icon={Zap} title="Two modes" desc="Plain Text mode for simple content; Script mode for powerful, programmable QR codes." />
+            <FeatureCard icon={QrCode} title="QR Code generation / 生成二維碼" desc="Type anything and get a scannable QR code in real time. No network required. 輸入任何內容，即時獲取可掃描的二維碼。完全無需連接網絡。" />
+            <FeatureCard icon={Code2} title="JavaScript Editor / JavaScript 編輯器" desc="Write JS scripts that produce dynamic content — like the current time or calculated values — every time the QR is generated. 撰寫 JS 腳本以產生動態內容（例如當前時間或計算結果），每次生成二維碼時均會即時運算。" />
+            <FeatureCard icon={BookMarked} title="Personal library / 個人資料庫" desc="Save up to 50 QR codes locally on your device. Scripts and plain-text codes, all in one place. 於裝置本地儲存多達 50 個二維碼。無論是 JS 腳本還是純文字代碼，都能集中一處輕鬆管理。" />
+            <FeatureCard icon={Share2} title="Deep link sharing / 深度鏈接分享" desc="Share QR codes as deep links. Data is encoded directly into the URL — no server, no upload, no tracking. 透過深度連結分享二維碼。資料直接編碼於網址之中 —— 無伺服器、免上傳、零追蹤。" />
           </div>
 
-          <div className="mt-12 space-y-3">
-            <SectionLabel>FAQ</SectionLabel>
-            <h2 className="text-xl font-bold text-foreground mb-5">Common questions</h2>
-            <AccordionItem q="Does the app need an internet connection?" a="No. QR code generation works entirely offline. You only need a connection if you choose to open a URL encoded inside a QR code." />
-            <AccordionItem q="What can I encode in a QR code?" a="Anything — plain text, URLs, Wi-Fi credentials, contact cards, or any output produced by a JavaScript script." />
-            <AccordionItem q="Is there a limit to how many QR codes I can save?" a="The app lets you save up to 50 QR codes in your personal library. You can delete any saved code at any time." />
-            <AccordionItem q="What does 'Script mode' actually do?" a="Script mode lets you write a small JavaScript function that runs each time a QR code is generated. For example, return the current time so the QR always encodes a fresh timestamp." />
-            <AccordionItem q="What is the 'Share Link' feature?" a="Share Link uses deep linking to encode your QR data directly into a URL. When someone opens that URL on a device with the app installed, it reconstructs the QR — no server involved." />
-            <AccordionItem q="Is it available on Android?" a="Yes! Dynamic QR Generator is available on both iOS (App Store) and Android (Google Play). The core features are identical on both platforms." />
-          </div>
         </section>
 
         <Divider />
 
         {/* Screenshots */}
-        <section id="screenshots" className="scroll-mt-20 pb-14">
-          <SectionLabel>See it in action</SectionLabel>
-          <h2 className="text-2xl font-bold text-foreground mb-10">Simple by design.</h2>
+        <section id="screenshots" className="scroll-mt-20">
+          <SectionLabel>See it in action / 實際操作</SectionLabel>
           <Screenshots />
         </section>
 
         <Divider />
 
         {/* Privacy */}
-        <section id="privacy" className="scroll-mt-20 pb-14">
+        <section id="privacy" className="scroll-mt-20 pb-2">
           <SectionLabel>Privacy Policy / 私隱權政策</SectionLabel>
-          <h2 className="text-2xl font-bold text-foreground mb-2">We don't collect anything.</h2>
-          <p className="text-sm leading-7 mb-8" style={{ color: "#8e8e93" }}>Effective date: 22 June 2026 · Version 1.0</p>
-
           <div className="rounded-2xl p-6 sm:p-8 mb-6" style={{ background: "#f9f6f0", border: "1px solid rgba(0,0,0,0.07)" }}>
             <span className="inline-flex text-xs font-semibold tracking-wider uppercase px-2.5 py-1 rounded-full mb-5" style={{ background: "rgba(0,122,255,0.1)", color: "#007aff" }}>English</span>
             <p className="text-sm leading-8" style={{ color: "#3a3a3c" }}>
-              The Dynamic QR Generator app is designed with strict privacy in mind.{" "}
+              The Dynamic QR Code Generator app is designed with strict privacy in mind.{" "}
               <strong className="text-foreground">We do not collect, store, transmit, or share any personal data or user-generated content.</strong>
             </p>
             <p className="text-sm leading-8 mt-4" style={{ color: "#3a3a3c" }}>
@@ -350,7 +338,7 @@ export default function App() {
           <div className="rounded-2xl p-6 sm:p-8" style={{ background: "#f9f6f0", border: "1px solid rgba(0,0,0,0.07)" }}>
             <span className="inline-flex text-xs font-semibold tracking-wider uppercase px-2.5 py-1 rounded-full mb-5" style={{ background: "rgba(0,0,0,0.06)", color: "#3a3a3c" }}>繁體中文</span>
             <p className="text-sm leading-9" style={{ color: "#3a3a3c", fontFamily: "'PingFang TC', 'Heiti TC', sans-serif" }}>
-              Dynamic QR Generator 應用程式以嚴格保護私隱為原則。
+              Dynamic QR Code Generator 應用程式以嚴格保護私隱為原則。
               <strong className="text-foreground">我們不會收集、儲存、傳送或分享任何個人資料或用戶生成的內容。</strong>
             </p>
             <p className="text-sm leading-9 mt-4" style={{ color: "#3a3a3c", fontFamily: "'PingFang TC', 'Heiti TC', sans-serif" }}>
@@ -369,59 +357,14 @@ export default function App() {
 
         {/* Terms */}
         <section id="terms" className="scroll-mt-20 pb-14">
-          <SectionLabel>Terms &amp; Conditions</SectionLabel>
-          <h2 className="text-2xl font-bold text-foreground mb-2">The short version.</h2>
+          <SectionLabel>Terms &amp; Conditions / 條款與細則</SectionLabel>
           <p className="text-sm leading-7 mb-8" style={{ color: "#8e8e93" }}>
-            By downloading or using Dynamic QR Generator, you agree to the following. These terms exist to protect both you and us — not to bury you in legalese.
+            By downloading or using Dynamic QR Code Generator, you agree to the following. 當您下載或使用動態二維碼生成器時，即代表您同意以下條款。
           </p>
           <div className="space-y-6">
-            <Clause num={1} title="Use it as intended" body="The app is for generating QR codes for lawful purposes. You may use QR codes you create for personal or commercial use, provided you own the rights to the encoded content." />
-            <Clause num={2} title="Don't misuse it" body="Don't use the app to generate QR codes linking to malware, phishing sites, or any illegal or harmful content. Don't reverse-engineer or redistribute the app or its components." />
-            <Clause num={3} title="Scripts are your responsibility" body="The Script Editor lets you run custom JavaScript on your device. You're responsible for any scripts you write and run. We don't review or have access to your scripts." />
-            <Clause num={4} title="No warranties" body='The app is provided "as is." We make no guarantees that QR codes will be scannable by every reader, or that scripts will produce the results you expect in every situation.' />
-            <Clause num={5} title="Liability is limited" body="To the extent permitted by law, we're not liable for any indirect or consequential damages arising from your use of the app or QR codes you generate with it." />
-            <Clause num={6} title="We may update these terms" body="If we make material changes, we'll update the effective date and note the change in the app. Continued use means you accept the updated terms." />
-            <Clause num={7} title="Governing law" body="These terms are governed by the laws of New South Wales, Australia. Any disputes will be handled in the courts of New South Wales." />
+            <Clause num={1} title="Use it as intended / 程式使用" body="The App allows you to generate, store, and share QR codes locally on your device. You are solely responsible for the content, URLs, or data you choose to encode using the App. You agree not to use the App to generate QR codes that link to malicious, illegal, or harmful content. 本程式允許您在裝置本地生成、儲存及分享二維碼。您須對選擇透過本程式進行編碼的內容、網址或資料負上完全責任。您同意不使用本程式生成連結至惡意、非法或有害內容的二維碼。" />
+            <Clause num={2} title="Privacy Policy / 私隱政策" body="We take your privacy seriously. The App operates strictly locally on your device and does not collect, store, or transmit your personal data to any external servers. 我們非常重視您的私隱。本程式嚴格於您的裝置本地端運行，不會收集、儲存或傳送您的任何個人資料至任何外部伺服器。" />
           </div>
-          <div className="mt-10 rounded-2xl px-6 py-5 text-sm leading-7" style={{ background: "rgba(0,122,255,0.06)", border: "1px solid rgba(0,122,255,0.15)", color: "#007aff" }}>
-            Questions about these terms or your privacy? Reach us at{" "}
-            <a href="mailto:support@dynamicqr.app" className="font-semibold underline underline-offset-2">support@dynamicqr.app</a>.
-          </div>
-        </section>
-
-        <Divider />
-
-        {/* Contact */}
-        <section id="contact" className="scroll-mt-20 pb-16">
-          <SectionLabel>Contact</SectionLabel>
-          <h2 className="text-2xl font-bold text-foreground mb-2">Get in touch.</h2>
-          <p className="text-sm leading-7 mb-10" style={{ color: "#8e8e93" }}>
-            Have a question, found a bug, or want to suggest a feature? We'd love to hear from you.
-          </p>
-          <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 mb-10">
-            <a href="mailto:support@dynamicqr.app" className="rounded-2xl p-5 flex flex-col gap-3 transition-all hover:scale-[1.02]" style={{ background: "#f9f6f0", border: "1px solid rgba(0,0,0,0.07)" }}>
-              <div className="w-10 h-10 rounded-xl flex items-center justify-center" style={{ background: "#1c1c1e" }}>
-                <Mail size={18} color="white" strokeWidth={1.8} />
-              </div>
-              <p className="font-semibold text-sm text-foreground">Email</p>
-              <p className="text-xs leading-relaxed" style={{ color: "#007aff" }}>support@dynamicqr.app</p>
-            </a>
-            <a href="#" className="rounded-2xl p-5 flex flex-col gap-3 transition-all hover:scale-[1.02]" style={{ background: "#f9f6f0", border: "1px solid rgba(0,0,0,0.07)" }}>
-              <div className="w-10 h-10 rounded-xl flex items-center justify-center" style={{ background: "#1c1c1e" }}>
-                <MessageSquare size={18} color="white" strokeWidth={1.8} />
-              </div>
-              <p className="font-semibold text-sm text-foreground">App Reviews</p>
-              <p className="text-xs leading-relaxed" style={{ color: "#8e8e93" }}>Leave a review on the App Store or Google Play</p>
-            </a>
-            <div className="rounded-2xl p-5 flex flex-col gap-3" style={{ background: "#f9f6f0", border: "1px solid rgba(0,0,0,0.07)" }}>
-              <div className="w-10 h-10 rounded-xl flex items-center justify-center" style={{ background: "#1c1c1e" }}>
-                <Globe size={18} color="white" strokeWidth={1.8} />
-              </div>
-              <p className="font-semibold text-sm text-foreground">Response time</p>
-              <p className="text-xs leading-relaxed" style={{ color: "#8e8e93" }}>We aim to reply within 5 business days</p>
-            </div>
-          </div>
-          <ContactForm />
         </section>
 
       </main>
@@ -433,21 +376,20 @@ export default function App() {
             <div className="flex items-center gap-3">
               <QRLogo size={36} />
               <div>
-                <p className="font-semibold text-sm text-foreground">Dynamic QR Generator</p>
-                <p className="text-xs" style={{ color: "#8e8e93" }}>Generate. Script. Share.</p>
+                <p className="font-semibold text-sm text-foreground">Dynamic QR Code Generator</p>
+                <p className="text-xs" style={{ color: "#8e8e93" }}>Script. Generate. Share.</p>
               </div>
             </div>
             <div className="flex flex-wrap gap-3">
-              <AppStoreBadge />
-              <PlayStoreBadge />
+              { false && <AppStoreBadge /> }
+              { false && <PlayStoreBadge /> }
             </div>
           </div>
           <div className="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-3 pt-6 border-t border-border text-xs" style={{ color: "#8e8e93" }}>
-            <p>© 2026 Dynamic QR Generator. All rights reserved.</p>
+            <p>© 2026 Dynamic QR Code Generator. All rights reserved.</p>
             <div className="flex gap-4">
               <a href="#privacy" className="hover:text-foreground transition-colors">Privacy Policy</a>
               <a href="#terms" className="hover:text-foreground transition-colors">Terms</a>
-              <a href="#contact" className="hover:text-foreground transition-colors">Contact</a>
             </div>
           </div>
         </div>
