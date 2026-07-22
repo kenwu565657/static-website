@@ -255,13 +255,13 @@ export default function App() {
         <div className="max-w-3xl mx-auto px-6 h-14 flex items-center justify-between">
           <div className="flex items-center gap-2.5">
             <QRLogo size={32} />
-            <span className="font-semibold text-sm tracking-tight">Dynamic QR Code Generator 動態二維碼生成器</span>
+            <span className="font-semibold text-sm tracking-tight">Dynamic QR Code Generator <br/> 動態二維碼生成器</span>
           </div>
           <nav className="hidden sm:flex items-center gap-5 text-xs font-medium" style={{ color: "#8e8e93" }}>
-            <a href="#features" className="hover:text-foreground transition-colors">Features</a>
-            <a href="#screenshots" className="hover:text-foreground transition-colors">Screenshots</a>
-            <a href="#privacy" className="hover:text-foreground transition-colors">Privacy</a>
-            <a href="#terms" className="hover:text-foreground transition-colors">Terms</a>
+            <a href="#features" className="hover:text-foreground transition-colors">Features <br/> 核心功能</a>
+            <a href="#screenshots" className="hover:text-foreground transition-colors">Screenshots <br/> 應用截圖</a>
+            <a href="#privacy" className="hover:text-foreground transition-colors">Privacy <br/> 私隱政策</a>
+            <a href="#terms" className="hover:text-foreground transition-colors">Terms <br/> 條款與細則</a>
           </nav>
         </div>
       </header>
@@ -376,8 +376,8 @@ export default function App() {
             <div className="flex items-center gap-3">
               <QRLogo size={36} />
               <div>
-                <p className="font-semibold text-sm text-foreground">Dynamic QR Code Generator</p>
-                <p className="text-xs" style={{ color: "#8e8e93" }}>Script. Generate. Share.</p>
+                <p className="font-semibold text-sm text-foreground">Dynamic QR Code Generator 動態二維碼生成器</p>
+                <p className="text-xs" style={{ color: "#8e8e93" }}>Script. Generate. Share. 編寫。生成。分享。</p>
               </div>
             </div>
             <div className="flex flex-wrap gap-3">
@@ -386,10 +386,10 @@ export default function App() {
             </div>
           </div>
           <div className="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-3 pt-6 border-t border-border text-xs" style={{ color: "#8e8e93" }}>
-            <p>© 2026 Dynamic QR Code Generator. All rights reserved.</p>
+            <p>© 2026 Dynamic QR Code Generator. All rights reserved. <br/>© 2026 動態二維碼生成器 版權所有，保留一切權利。</p>
             <div className="flex gap-4">
-              <a href="#privacy" className="hover:text-foreground transition-colors">Privacy Policy</a>
-              <a href="#terms" className="hover:text-foreground transition-colors">Terms</a>
+              <a href="#privacy" className="hover:text-foreground transition-colors">Privacy Policy <br/>私隱政策</a>
+              <a href="#terms" className="hover:text-foreground transition-colors">Terms <br/>條款與細則</a>
             </div>
           </div>
         </div>
