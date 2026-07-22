@@ -8,26 +8,18 @@ import { ImageWithFallback } from "@/app/components/figma/ImageWithFallback";
 import screenshot1 from "@/imports/Simulator_Screenshot_-_iPhone_14_Plus_-_2026-06-21_at_15.35.37.png";
 import screenshot2 from "@/imports/Simulator_Screenshot_-_iPhone_14_Plus_-_2026-06-21_at_15.35.52.png";
 import screenshot3 from "@/imports/Simulator_Screenshot_-_iPhone_14_Plus_-_2026-06-21_at_15.36.07.png";
+import qrLogo from "@/imports/dynamic-qr-code-generator-app-icon.png";
 
 /* ── Logo ── */
 function QRLogo({ size = 44 }: { size?: number }) {
   return (
-    <svg width={size} height={size} viewBox="0 0 48 48" fill="none" aria-hidden="true">
-      <rect width="48" height="48" rx="12" fill="#1c1c1e" />
-      <rect x="8" y="8" width="14" height="14" rx="1" fill="white" />
-      <rect x="10" y="10" width="10" height="10" rx="0.5" fill="#1c1c1e" />
-      <rect x="12" y="12" width="6" height="6" fill="white" />
-      <rect x="26" y="8" width="14" height="14" rx="1" fill="white" />
-      <rect x="28" y="10" width="10" height="10" rx="0.5" fill="#1c1c1e" />
-      <rect x="30" y="12" width="6" height="6" fill="white" />
-      <rect x="8" y="26" width="14" height="14" rx="1" fill="white" />
-      <rect x="10" y="28" width="10" height="10" rx="0.5" fill="#1c1c1e" />
-      <rect x="12" y="30" width="6" height="6" fill="white" />
-      <rect x="26" y="26" width="6" height="6" fill="white" />
-      <rect x="34" y="26" width="6" height="6" fill="white" />
-      <rect x="26" y="34" width="6" height="6" fill="white" />
-      <rect x="34" y="34" width="6" height="6" fill="#007aff" />
-    </svg>
+      <img
+          src={qrLogo as string}
+          alt="Dynamic QR Code Generator logo"
+          width={size}
+          height={size}
+          className="rounded-xl object-contain"
+      />
   );
 }
 
